@@ -1,11 +1,16 @@
 import React from 'react';
-import Button from './components/Button'
+import Button from './components/useState/Button'
 import './App.css';
+import ClassCounter from './components/useState/ClassCounter';
+import FunctionalCounter from './components/useState/FunctionalCounter';
 
 function App() {
 
   return (
-    <Button/>
+    <div className='App'>
+    <ClassCounter/>
+    <FunctionalCounter/>
+    </div>
   );
 }
 
