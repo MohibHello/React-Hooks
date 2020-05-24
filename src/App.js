@@ -13,7 +13,7 @@ function App() {
     {/* <ClassCounter/>
     <FunctionalCounter/> */}
     <StateObject/>
-    <MultipleUseState/>
+    {/* <MultipleUseState/> */}
     </div>
   );
 }
