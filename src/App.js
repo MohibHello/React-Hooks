@@ -4,6 +4,7 @@ import './App.css';
 import ClassCounter from './components/useState/ClassCounter';
 import FunctionalCounter from './components/useState/FunctionalCounter';
 import StateObject from './components/useState/StateObject';
+import MultipleUseState from './components/useState/MultipleUseState';
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
     {/* <ClassCounter/>
     <FunctionalCounter/> */}
     <StateObject/>
+    <MultipleUseState/>
     </div>
   );
 }

@@ -1,21 +1,28 @@
 import React, { useState } from "react";
 
-function StateObject() {
-  const [state, setState] = useState({
-    name: "",
-    age: "",
-    phone: "",
-    address: "",
-  });
+function MultipleUseState() {
+ const [name, setName] = useState('')
+ const [age, setAge] = useState('')
+ const [phone, setPhone] = useState('')
+ const [address, setAddress] = useState('')
 
-  const handleChange = (event) => {
-    console.log([event.target.name]);
-    setState({ ...state, [event.target.name]: event.target.value });
+
+  const handleName = (event) => {
+    setName(event.target.value)
+  };
+  const handleAge = (event) => {
+    setAge(event.target.value)
+  };
+  const handlePhone = (event) => {
+    setPhone(event.target.value)
+  };
+  const handleAddress = (event) => {
+    setAddress(event.target.value)
   };
 
   return (
     <div className="container">
-      <h3 className="mt-5 mb-5">useState with Object</h3>
+      <h3 className="mt-5 mb-5"> Multiple useState with Object</h3>
       <form>
         <div class="form-group row">
           <label className="col-1 col-form-label" htmlFor="name">
@@ -27,7 +34,7 @@ function StateObject() {
               type="text"
               name="name"
               id="name"
-              onChange={handleChange}
+              onChange={handleName}
             />
           </div>
         </div>
@@ -37,7 +44,7 @@ function StateObject() {
           type="number"
           name="age"
           id="age"
-          onChange={handleChange}
+          onChange={handleAge}
         />
         <label for="name">phone:</label>
         <input
@@ -45,7 +52,7 @@ function StateObject() {
           type="number"
           name="phone"
           id="phone"
-          onChange={handleChange}
+          onChange={handlePhone}
         />
         <label for="name">address:</label>
         <textarea
@@ -53,17 +60,17 @@ function StateObject() {
           type="textarea"
           name="address"
           id="address"
-          onChange={handleChange}
+          onChange={handleAddress}
         />
       </form>
       <div>
         <h3>
-          Hi, Your name is {state.name}, {state.age} Year's old with phone{" "}
-          {state.phone} living in {state.address}
+          Hi, Your name is {name}, {age} Year's old with phone{" "}
+          {phone} living in {address}
         </h3>
       </div>
     </div>
   );
 }
 
-export default StateObject;
+export default MultipleUseState;
