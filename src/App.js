@@ -9,6 +9,7 @@ import ClassComponentLifeCycle from './components/useEffect/ClassComponentLifeCy
 import SampleComponent from './components/useEffect/SampleComponent';
 import FunctionalComponentLifeCycle from './components/useEffect/FunctionComponentLifeCycle';
 import Counter from './components/useEffect/CounterMountOrUnmount';
+import UseEffectEventListener from './components/useEffect/UseEffectEventListener';
 function App() {
 
   return (
@@ -20,7 +21,8 @@ function App() {
     {/* <ClassComponentLifeCycle/> */}
     {/* <SampleComponent /> */}
     {/* <FunctionalComponentLifeCycle/> */}
-    <Counter/>
+    {/* <Counter/> */}
+    <UseEffectEventListener/>
     </div>
   );
 }
