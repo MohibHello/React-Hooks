@@ -8,7 +8,7 @@ import MultipleUseState from './components/useState/MultipleUseState';
 import ClassComponentLifeCycle from './components/useEffect/ClassComponentLifeCycle';
 import SampleComponent from './components/useEffect/SampleComponent';
 import FunctionalComponentLifeCycle from './components/useEffect/FunctionComponentLifeCycle';
-
+import Counter from './components/useEffect/CounterMountOrUnmount';
 function App() {
 
   return (
@@ -19,7 +19,8 @@ function App() {
     {/* <MultipleUseState/> */}
     {/* <ClassComponentLifeCycle/> */}
     {/* <SampleComponent /> */}
-    <FunctionalComponentLifeCycle/>
+    {/* <FunctionalComponentLifeCycle/> */}
+    <Counter/>
     </div>
   );
 }
