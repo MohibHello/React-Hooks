@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import FunctionalComponentLifeCycle from './FunctionComponentLifeCycle';
+import UseEffectMountAndUnMountOnly from './UseEffectMountAndUnMountOnly';
 
 function Counter() {
 
@@ -13,7 +14,7 @@ function Counter() {
     return (
         <div>
             <button onClick={handleVisible}>Hide/Show Counter</button>
-           {visible && <FunctionalComponentLifeCycle/>} 
+           {visible && <UseEffectMountAndUnMountOnly/>} 
         </div>
     )
 }
