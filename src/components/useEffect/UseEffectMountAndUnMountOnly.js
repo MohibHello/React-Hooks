@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 function useEffectMountAndUnMountOnly() {
   const [count, setCount] = useState(0);
 
+  const [color, setColor] = useState('red')
+
   const handleIncrement = () =>
     setCount((prevCount) => {
       return prevCount + 1;
@@ -29,17 +31,33 @@ function useEffectMountAndUnMountOnly() {
   to mimic this we need to pass empty array [] as second argument to useEffect()
     */
 
+    /*  The Second Argument to the useEffect Hook:
+        1. it takes [] to mimic CDM and CWU we need to pass empty array [] i,e., it will
+           not call useEffect() when state changes or component re-renders
+
+        2. if we want to call useEffect() when state or particular piece of state changes then we need 
+          to pass that state variable as value ex: we want to keep track of change in color then
+          pass color / count
+     */
   useEffect(() => {
     console.log(`inside useEffect when component mounted`);
-    console.log(`count is ${count}`);
+    console.log(`CDM color is ${color}`)
     return () => {
       console.log(`Executing useEffect return statement and count is ${count}`);
+      console.log(`CDU color is ${color}`)
     };
-  }, []);
+  }, [color]);
+
+
+  const handleColorChange=()=>{
+    const newColor = color==='red'?'blue':'red'
+    setColor(newColor);
+  }
+
 
   return (
     <div>
-      <h1 className="mt-5" style={{ textAlign: "center" }}>
+      <h1 className="mt-5" style={{ textAlign: "center" ,color:color}}>
         {count}
       </h1>
       <div className="row justify-content-center">
@@ -48,6 +66,12 @@ function useEffectMountAndUnMountOnly() {
           onClick={handleIncrement}
         >
           Increment
+        </button>
+        <button
+          className="col-auto btn btn-primary mr-2"
+          onClick={handleColorChange}
+        >
+          Change Color
         </button>
         <button
           className="col-auto btn btn-secondary ml-2"
