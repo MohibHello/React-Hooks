@@ -10,6 +10,8 @@ import SampleComponent from './components/useEffect/SampleComponent';
 import FunctionalComponentLifeCycle from './components/useEffect/FunctionComponentLifeCycle';
 import Counter from './components/useEffect/CounterMountOrUnmount';
 import UseEffectEventListener from './components/useEffect/UseEffectEventListener';
+import ParentApp from './components/useContext/ClassContext';
+import FunctionalContext from './components/useContext/FunctionalContext';
 function App() {
 
   return (
@@ -22,7 +24,9 @@ function App() {
     {/* <SampleComponent /> */}
     {/* <FunctionalComponentLifeCycle/> */}
     {/* <Counter/> */}
-    <UseEffectEventListener/>
+    {/* <UseEffectEventListener/> */}
+    {/* <ParentApp/> */}
+    <FunctionalContext/>
     </div>
   );
 }
