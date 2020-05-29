@@ -16,6 +16,7 @@ import TestState from './components/TestState';
 import Custom from './components/customHooks/Custom';
 import CustomCounter from './components/customHooks/CustomCounter';
 import CustomCounter2 from './components/customHooks/CustomCounter2';
+import Input from './components/customHooks/Challenge/Input';
 function App() {
 
   return (
@@ -33,9 +34,10 @@ function App() {
     {/* <FunctionalContext/> */}
     {/* <TestState/> */}
     {/* <Custom/> */}
-    <CustomCounter start={3}/>
+    {/* <CustomCounter start={3}/>
     <CustomCounter  start={15}/>
-    <CustomCounter2 start={2} />
+    <CustomCounter2 start={2} /> */}
+    <Input type={"text"} placeholder={'Name'}/>
     </div>
   );
 }
