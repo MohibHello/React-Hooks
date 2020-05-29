@@ -12,6 +12,10 @@ import Counter from './components/useEffect/CounterMountOrUnmount';
 import UseEffectEventListener from './components/useEffect/UseEffectEventListener';
 import ParentApp from './components/useContext/ClassContext';
 import FunctionalContext from './components/useContext/FunctionalContext';
+import TestState from './components/TestState';
+import Custom from './components/customHooks/Custom';
+import CustomCounter from './components/customHooks/CustomCounter';
+import CustomCounter2 from './components/customHooks/CustomCounter2';
 function App() {
 
   return (
@@ -26,7 +30,12 @@ function App() {
     {/* <Counter/> */}
     {/* <UseEffectEventListener/> */}
     {/* <ParentApp/> */}
-    <FunctionalContext/>
+    {/* <FunctionalContext/> */}
+    {/* <TestState/> */}
+    {/* <Custom/> */}
+    <CustomCounter start={3}/>
+    <CustomCounter  start={15}/>
+    <CustomCounter2 start={2} />
     </div>
   );
 }
